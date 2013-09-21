@@ -7,6 +7,10 @@
 	border-width:medium;
 	}
 
+body {
+	background: #D2D1CE
+	}
+	
 div {
     width: 900px;
     margin:0 auto;
