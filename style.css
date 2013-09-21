@@ -1,6 +1,10 @@
-margin: 0 auto;
-body {
-    width:100%
+.header {
+	text-align:center;
+	}
+
+.editable {
+	border-style:solid;
+	border-width:medium;
 	}
 
 div {
