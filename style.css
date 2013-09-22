@@ -9,8 +9,17 @@
 	background: #F3F2F0;
 	}
 
+.beastbox{
+	border-radius: 104px 32px 32px 32px;
+	-moz-border-radius: 104px 32px 32px 32px;
+	-webkit-border-radius: 104px 32px 32px 32px;
+	border: 5px solid #000000;
+	padding-left:50px;
+	background-color: #ecf0f1;
+	}
+	
 body {
-	background: #D2D1CE;
+	background: #bdc3c7;
 	}
 	
 div {
