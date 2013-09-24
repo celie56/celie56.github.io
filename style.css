@@ -8,9 +8,10 @@
 	margin: 10px auto;
 	position: relative;
 	}
-	
-.left {
-	display: inline-block;	
+
+.center {
+	margin-right: auto;
+	margin-left: auto;
 	}
 
 .linkbutton {
@@ -21,6 +22,8 @@
 	width: 100px;
 	text-align: center;
 	background-color: #ecf0f1;
+	display: inline-block;	
+	margin-top: -2cm;
 	}
 	
 .linkbutton:hover {
