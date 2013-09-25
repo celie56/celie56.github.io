@@ -78,26 +78,26 @@ a {
         display: none;
     }
 
-    .email-count {
+    .count {
         color: rgb(75, 113, 151);
     }
 
-    .email-label-personal,
-    .email-label-work,
-    .email-label-travel {
+    .label-personal,
+    .label-work,
+    .label-travel {
         width: 15px;
         height: 15px;
         display: inline-block;
         margin-right: 0.5em;
         border-radius: 3px;
     }
-    .email-label-personal {
+    .label-personal {
         background: #ffc94c;
     }
-    .email-label-work {
+    .label-work {
         background: #41ccb4;
     }
-    .email-label-travel {
+    .label-travel {
         background: #40c365;
     }
 
@@ -105,59 +105,59 @@ a {
 
 
 /* Email Item Styles */
-.email-item {
+.item {
     padding: 0.9em 1em;
     border-bottom: 1px solid #ddd;
     border-left: 6px solid transparent;
 }
-    .email-avatar {
+    .avatar {
         border-radius: 3px;
         margin-right: 0.5em;
     }
-    .email-name,
-    .email-subject {
+    .name,
+    .subject {
         margin: 0;
     }
-    .email-name {
+    .name {
         text-transform: uppercase;
         color: #999;
     }
-    .email-desc {
+    .desc {
         font-size: 80%;
         margin: 0.4em 0;
     }
 
-.email-item-selected {
+.item-selected {
     background: #eee;
 }
-.email-item-unread {
+.item-unread {
     border-left: 6px solid #02a3c6;
 }
 
 /* Email Content Styles */
-.email-content-header, .email-content-body, .email-content-footer {
+.content-header, .content-body, .content-footer {
     padding: 1em 2em;
 }
-    .email-content-header {
+    .content-header {
         border-bottom: 1px solid #ddd;
     }
 
-        .email-content-title {
+        .content-title {
             margin: 0.5em 0 0;
         }
-        .email-content-subtitle {
+        .content-subtitle {
             font-size: 1em;
             margin: 0;
             font-weight: normal;
         }
-            .email-content-subtitle span {
+            .content-subtitle span {
                 color: #999;
             }
-    .email-content-controls {
+    .content-controls {
         margin-top: 2em;
         text-align: right;
     }
-        .email-content-controls .secondary-button {
+        .content-controls .secondary-button {
             margin-bottom: 0.3em;
         }
 
