@@ -1,25 +1,77 @@
-<html>
-	<head>
-	<link rel="stylesheet" type="text/css" href="style.css"></link>
-	<script src="https://togetherjs.com/togetherjs-min.js"></script>
-		<link rel="stylesheet" href="css/medium.editor.css">
-		<script>
-			//TogetherJS is silly
-			//document.onload=TogetherJS(this);
-		</script>
-		<script src="js/medium.editor.js"></script>
-		
-	</head>
-	<body>
-		<h1 class="header">Text this shit</h1>
-		<br/>
-		<div class="editable">
-			<p>Sphinx of black quartz, judge my vow</p>
-			
-			<p>Jackdaws love my big sphinx of quartz</p>
-		</div>
-		<script>
-			var editor = new MediumEditor('.editable');
-		</script>
-	</body>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Index</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="index.css">
+    <script>
+        //TogetherJS is silly
+        //document.onload=TogetherJS(this);
+    </script>
+    <script src="js/medium.editor.js"></script>
+</head>
+<body>
+    <div class="content" id="layout">
+        <div id="nav">
+            <a href="#" class="nav-menu-button">Menu</a>
+            <div class="nav-inner">
+                <div class="pure-menu pure-menu-open">
+                    <ul>
+                        <li><a href="index.html" class="primary-button">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="textit.html">Textit</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="main">
+            <div class="content">
+                <div class="content-header">
+                    <div>
+                        <h1 class="content-title">Welcome Aqui</h1>
+                    </div>
+                </div>
+
+                <div class="content-body">
+                    <div class="editable">
+                        <p>Sphinx of black quartz, judge my vow</p>
+
+                        <p>Jackdaws love my big sphinx of quartz</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js"></script>
+    <script>
+        YUI().use('node-base', 'node-event-delegate', function (Y) {
+
+            var menuButton = Y.one('.nav-menu-button'),
+                nav = Y.one('#nav');
+
+            // Setting the active class name expands the menu vertically on small screens.
+            menuButton.on('click', function (e) {
+                nav.toggleClass('active');
+            });
+
+            // Your application code goes here...
+
+        });
+    </script>
+    <script>
+        YUI().use('node-base', 'node-event-delegate', function (Y) {
+            // This just makes sure that the href="#" attached to the <a> elements
+            // don't scroll you back up the page.
+            Y.one('body').delegate('click', function (e) {
+                e.preventDefault();
+            }, 'a[href="#"]');
+        });
+    </script>
+    <script>
+        var editor = new MediumEditor('.editable');
+    </script>
+</body>
 </html>
+
