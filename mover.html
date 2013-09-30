@@ -1,10 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Textit</title>
+    <title>Mover</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
     <link rel="stylesheet" href="index.css">
-    <script src="js/medium.editor.js"></script>
 </head>
 <body>
     <div class="content" id="layout">
@@ -16,33 +15,26 @@
                         <li><a href="index.html" class="primary-button">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="textit.html">Textit</a></li>
-                        <li><a href="mover.html">Mover</a></li>
+                        <li><a href="mover.html">Mover</a></li>                        
                     </ul>
                 </div>
             </div>
         </div>
-
         <div id="main">
             <div class="content">
                 <div class="content-header">
                     <div>
-                        <h1 class="content-title">TextIt</h1>
+                        <h1 id="message" class="content-title">Shit goes here</h1>
                     </div>
                 </div>
 
                 <div class="content-body">
-                    <div class="editable">
-                        <p>Sphinx of black quartz, judge my vow</p>
-                        <p>Jackdaws love my big sphinx of quartz</p>
-                        <p>So, I'm sorry about the silly box that may or may not appear on your page when you loaded this.  There's something wrong for now.  Sorry. </p>
-                    </div>
+                    <canvas style="border: 1px solid black" id="myCanvas" width="800" height="800">
+                    </canvas>
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        var editor = new MediumEditor('.editable');
-    </script>
+    <script type="text/javascript" src="js/mover.js"></script>
 </body>
 </html>
-
