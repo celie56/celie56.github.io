@@ -110,7 +110,6 @@ a {
 
 
 
-/* Email Item Styles */
 .item {
     padding: 0.9em 1em;
     border-bottom: 1px solid #ddd;
@@ -159,10 +158,3 @@ a {
             .content-subtitle span {
                 color: #999;
             }
-    .content-controls {
-        margin-top: 2em;
-        text-align: right;
-    }
-        .content-controls .secondary-button {
-            margin-bottom: 0.3em;
-        }
