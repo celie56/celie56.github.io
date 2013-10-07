@@ -6,24 +6,6 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <link rel="stylesheet" href="index.css">
     <script type="text/javascript" src="js/keypress.js"></script>
-    <script type="text/javascript">
-        var began = false;
-        if (began == false) {
-            keypress.combo("enter", function () {
-                //Create a red rectangle
-                var canvas = document.getElementById("Canvas");
-                var ctx = canvas.getContext("2d");
-                ctx.fillStyle = "#FF0000";
-                ctx.fillRect(0, 0, 150, 75);
-
-                //change message
-                message.innerHTML = "Use w,a,s,d to move";
-
-                //has begun
-                began = true;
-            });
-        }
-    </script>
 </head>
 <body>
     <div class="content" id="layout">
@@ -57,6 +39,30 @@
     <script type="text/javascript">
         var message = document.getElementById("message");
         message.innerHTML = "Press Enter to Begin";
+
+        var began = false;
+        var canvas = document.getElementById("Canvas");
+        var player = canvas.getContext("2d");
+        if (began == false) {
+            keypress.combo("enter", function () {
+                //Create a red rectangle
+                player.fillStyle = "#FF0000";
+                player.fillRect(0, 0, 150, 75);
+
+                //change message
+                message.innerHTML = "Use w,a,s,d to move";
+
+                //has begun
+                began = true;
+            });
+        }
+        if (began == true) {
+            keypress.combo("s", function () {
+                player.animate({
+
+                })
+            });
+        }
     </script>
 </body>
 </html>
