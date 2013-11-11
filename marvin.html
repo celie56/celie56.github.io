@@ -1,0 +1,68 @@
+﻿<html>
+<head>
+    <title>Marvin</title>
+
+    <!-- My style -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- Using Slate bootstrap theme from http://bootswatch.com/ -->
+    <link href="css/bootstrap.minblack.css" rel="stylesheet">
+    <link rel="shortcut icon" href="pics/E.ico">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <div class="col-md-2">
+            <img id="marvin" ondrop="drop(event)" ondragover="allowDrop(event)" class="centerimage" style="padding-top: 5px" src="./pics/marvin.png" />
+            <ul class="nav nav-pills nav-stacked">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li class="active"><a href="marvin.html">Marvin</a></li>
+            </ul>
+        </div>
+        <!-- Main Content -->
+        <div class="col-md-10">
+            <h1 style="padding-top: 3%; padding-bottom: 3%">
+                Marvin Wants to Play
+            </h1>
+            <p>
+                I received a request to make Marvin interactive.  This is where I will try and implement something.
+            </p>
+            <div>
+                <img id="donut" draggable="true" ondragstart="drag(event)" src="./pics/donut.png" />
+            </div>
+            <div>
+                <p class="text-success" id="output">
+
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- They see me (not) scriptin', they hatin' -->
+    <script type="text/javascript" src="./js/jquery-2.0.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Marvinscript -->
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("Text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("Text");
+            if (data == "donut") {
+                document.getElementById("output").innerHTML = "<br/>Androids don't eat donuts"
+            }
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</body>
+</html>
