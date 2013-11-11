@@ -1,60 +1,48 @@
-<!doctype html>
-<html lang="en">
+<html>
 <head>
     <title>Index</title>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
-    <link rel="stylesheet" href="index.css">
+
+    
+    <!-- Using Slate bootstrap theme from http://bootswatch.com/ -->
+    <link href="css/bootstrap.minblack.css" rel="stylesheet">
     <link rel="shortcut icon" href="pics/E.ico">
 </head>
 <body>
-    <div class="content" id="layout">
-        <div id="nav">
-            <a href="#" class="nav-menu-button">Menu</a>
-            <div class="nav-inner">
-                <div class="pure-menu pure-menu-open">
-                    <ul>
-                        <li><a href="index.html" class="primary-button">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="textit.html">Textit</a></li>
-                        <li><a href="mover.html">Mover</a></li>
-                    </ul>
-                </div>
-            </div>
+    <div class="container">
+        <!-- Navigation -->
+        <div class="col-md-2">
+            <img style="padding-top: 5px" src="./pics/marvin.png" />
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
         </div>
-
-        <div id="main">
-            <div class="content">
-                <div class="content-header">
-                    <div>
-                        <h1 class="content-title">Pura Vida Mae Bienvenidos</h1>
-                    </div>
-                </div>
-
-                <div class="content-body">
-                    <p>
-                        Thank you for coming to my website.  It is currently under heavy development and will be changing rapidly over the next couple months.
-                        If you have any questions, comments, or just want more information about me click the tab on the left titled About Me to find that information.  
-                        While the other tabs may have issues, or may not even be functional at the time you are checking the about me portion should remain stable.
-                    </p>
-                    <p>
-                        Current Plans:
-                    </p>
-                    <ul>
-                        <li>Switch to bootstrap styling (currently in the works at ./future/future.html)</li>
-                        <li>Finish mover page</li>
-                        <li>Add some fun pictures</li>
-                        <li>Get those done</li>
-                    </ul>
-                    <p>
-                        Once again, thank you for your interest
-                        <br />
-                        -Chris
-                    </p>
-                    
-                </div>
-            </div>
+        <!-- Main Content -->
+        <div class="col-md-10">
+            <h1 style="padding-top: 3%; padding-bottom: 3%">
+                Pura Vida Mae Bienvenidos
+            </h1>
+            <p>
+                New: This will quite shortly replace my current landing page.  Thanks :)
+            </p>
+            <p>
+                This is the future of my website, I am implementing bootstrap and checking it out. 
+                It is currently under heavy development and will be changing rapidly over the next couple months.
+            </p>
+            <blockquote>
+                <p>
+                    "There is a theory which states that if ever anyone discovers exactly what the Universe is for and why it is here, 
+                    it will instantly disappear and be replaced by something even more bizarre and inexplicable.
+                    There is another theory which states that this has already happened."
+                </p>
+            </blockquote>
         </div>
     </div>
-    <!-- Not ready yet <script type="text/javascript" src="js/pageload.js"></script>-->
+    
+
+    <!-- They see me (not) scriptin', they hatin' -->
+    <script type="text/javascript" src="./js/jquery-2.0.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
