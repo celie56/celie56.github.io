@@ -42,12 +42,12 @@
     <script type="text/javascript" src="./js/jquery-2.0.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
-        $.getJSON('notes.js', function(result){
-            $.each(result, function(i, field){
-                
+        $.getJSON("notes.js", function(result){
+            $.each(result.entries, function(key, value){
+                $("#noteholder").append("<blockquote>" + value.text + "<small>" + value.date + "</small></blockquote>");
             });
         });
-        $("#noteholder").append("<blockquote>Hello</blockquote><blockquote>Nooooo<small>12/27/13</small></blockquote>");
+        $("#noteholder").append("<blockquote class='pull-right'>Hello</blockquote><blockquote>Nooooo<small>12/27/13</small></blockquote>");
     </script>
 </body>
 </html>
