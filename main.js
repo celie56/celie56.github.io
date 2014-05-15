@@ -65,4 +65,5 @@ $("li").click(function(event){
     $('#' + currentpage).removeClass('active');
     $(this).addClass('active');
     update($(this)[0].id);
+    currentpage = this[0].id;
 });
