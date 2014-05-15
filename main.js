@@ -1,7 +1,7 @@
 
 $header		= $("#header");
 $content	= $("#content");
-$buttons    = $("#buttons");
+$buttons	= $("#buttons");
 $picture	= $("#picture");
 
 var pages =
@@ -25,6 +25,8 @@ var pages =
   }
 
 ];
+
+var currentpage = 0;
 
 var setHeader = function setHeaderF(header){
 	$header.html(header);
@@ -60,6 +62,7 @@ update(0);
 genButtons();
 
 $("li").click(function(event){
-    console.log($(this)[0].id);
+    $('#' + currentpage).removeClass('active');
+    $(this).addClass('active');
     update($(this)[0].id);
 });
