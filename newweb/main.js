@@ -6,7 +6,7 @@ var pages =
 [
   {
     "header": "Main",
-    "path": "stuff"
+    "path": "main.html"
   },
   {
     "header": "Main",
