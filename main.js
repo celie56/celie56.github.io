@@ -51,6 +51,9 @@ var removeAll = function removeAllF(){
 	$header.remove();
 	$content.remove();
 }
+var addGames = function addGamesF(){
+	$('head').append('<script src=\'js/blackjack.js\'></script>');
+}
 
 // Called immediately
 update(0);
