@@ -6,16 +6,29 @@ $buttons    = $("#buttons");
 var pages =
 [
   {
-    "header": "Welcome Home",
+    "header": "Pura Vida Mae Bienvenidos",
     "button": "Home",
     "path": "main.html"
   },
 
   {
-    "header": "Main",
-    "button": "Not Home",
-    "path": "stuff"
+    "header": "Who is Chris Elie?",
+    "button": "About",
+    "path": "about.html"
+  },
+
+  {
+    "header": "Projects",
+    "button": "Projects",
+    "path": "projects.html"
+  },
+
+  {
+    "header": "Marvin Wants to Play",
+    "button": "Marvin",
+    "path": "marvin.html"
   }
+
 ];
 
 var setHeader = function setHeaderF(header){
@@ -28,12 +41,18 @@ var setContent = function setContentF(path){
 }
 var genButtons = function genButtonsF(){
     for(var i = 0; i < pages.length; i++){
-        $buttons.append("<li id=\"" + i + "\">" + pages[i].button + "</li>" );
+        $buttons.append("<li id=\"" + i + "\"><a>" + pages[i].button + "</a></li>" );
     }
 }
+var update = function updateF(number){
+    setHeader(pages[number].header);
+    setContent(pages[number].path);
+}
 
-setHeader(pages[0].header);
-setContent(pages[0].path);
+update(0);
 genButtons();
 
-console.log(pages[0]);
+$("li").click(function(event){
+    console.log($(this)[0].id);
+    update($(this)[0].id);
+});
