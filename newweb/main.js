@@ -1,15 +1,19 @@
 
 $header		= $("#header");
 $content	= $("#content");
+$buttons    = $("#buttons");
 
 var pages =
 [
   {
-    "header": "Main",
+    "header": "Welcome Home",
+    "button": "Home",
     "path": "main.html"
   },
+
   {
     "header": "Main",
+    "button": "Not Home",
     "path": "stuff"
   }
 ];
@@ -21,6 +25,11 @@ var setContent = function setContentF(path){
 	$.get("pages/" + path, function(data){
 		$content.html(data);
 	})
+}
+var genButtons = function genButtonsF(){
+    for(var i = 0; i < pages.length; i++){
+        $buttons.append("<li id=\"" + i + "\">" + pages[i].button + "</li>" );
+    }
 }
 
 setHeader(pages[0].header);
