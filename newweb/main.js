@@ -34,5 +34,6 @@ var genButtons = function genButtonsF(){
 
 setHeader(pages[0].header);
 setContent(pages[0].path);
+genButtons();
 
 console.log(pages[0]);
