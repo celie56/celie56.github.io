@@ -18,7 +18,7 @@ var setHeader = function setHeaderF(header){
 	$header.html(header);
 }
 var setContent = function setContentF(path){
-	$.get(path, function(data){
+	$.get("pages/" + path, function(data){
 		$content.html(data);
 	})
 }
