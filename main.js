@@ -2,6 +2,7 @@
 $header		= $("#header");
 $content	= $("#content");
 $buttons    = $("#buttons");
+$picture	= $("#picture");
 
 var pages =
 [
@@ -43,6 +44,15 @@ var update = function updateF(number){
     setContent(pages[number].path);
 }
 
+// Personal Functions
+var removeAll = function removeAllF(){
+	$picture.remove();
+	$buttons.remove();
+	$header.remove();
+	$content.remove();
+}
+
+// Called immediately
 update(0);
 genButtons();
 
