@@ -21,12 +21,6 @@ var pages =
     "header": "Projects",
     "button": "Projects",
     "path": "projects.html"
-  },
-
-  {
-    "header": "Marvin Wants to Play",
-    "button": "Marvin",
-    "path": "marvin.html"
   }
 
 ];
