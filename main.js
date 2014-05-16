@@ -28,18 +28,19 @@ var pages =
 
 var currentpage = 0;
 
-var setHeader = function setHeaderF(header){
-	$header.html(header);
-}
-var setContent = function setContentF(path){
-	$.get("pages/" + path, function(data){
-		$content.html(data);
-	})
-}
 var genButtons = function genButtonsF(){
     for(var i = 0; i < pages.length; i++){
-        $buttons.append("<li id=\"" + i + "\"><a>" + pages[i].button + "</a></li>" );
+        $buttons.append("<li id=\"" + i + "\" class=\"button\"><a>" + pages[i].button + "</a></li>" );
     }
+}
+
+var setHeader = function setHeaderF(header){
+    $header.html(header);
+}
+var setContent = function setContentF(path){
+    $.get("pages/" + path, function(data){
+        $content.html(data);
+    })
 }
 var update = function updateF(number){
     setHeader(pages[number].header);
