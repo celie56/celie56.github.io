@@ -45,6 +45,7 @@ var setContent = function setContentF(path){
 var update = function updateF(number){
     setHeader(pages[number].header);
     setContent(pages[number].path);
+    history.pushState("hello", "New Title", pages[number].button);
 }
 
 // Personal Functions
