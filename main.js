@@ -62,12 +62,11 @@ update(0);
 genButtons();
 $('#0').addClass('active');
 
-var path = window.location.pathname.split('/');
-
-if(path[path.length - 1] === "/nopic"){
-  console.log(path[path.length-1]);
-  $picture.remove();
-}
+$(document).ready(function(){
+    var path = window.location.pathname.toLowerCase();
+    if(path == '/nopic')
+	$picture.remove();
+});
 
 // waiting
 $("li").click(function(event){
