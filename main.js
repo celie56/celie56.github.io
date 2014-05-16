@@ -62,6 +62,11 @@ update(0);
 genButtons();
 $('#0').addClass('active');
 
+if(window.location.pathname = "/nopic"){
+  $picture.remove();
+}
+
+// waiting
 $("li").click(function(event){
     $('#' + currentpage).removeClass('active');
     $(this).addClass('active');
