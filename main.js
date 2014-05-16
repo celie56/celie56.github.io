@@ -62,11 +62,11 @@ update(0);
 genButtons();
 $('#0').addClass('active');
 
-$(document).ready(function(){
+//$(document).ready(function(){
     var path = window.location.pathname.toLowerCase();
     if(path == '/nopic')
-	$picture.remove();
-});
+        $picture.remove();
+//});
 
 // waiting
 $("li").click(function(event){
