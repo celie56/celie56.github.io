@@ -62,7 +62,9 @@ update(0);
 genButtons();
 $('#0').addClass('active');
 
-if(window.location.pathname === "/nopic"){
+var path = window.location.pathname;
+
+if(path === "/nopic"){
   $picture.remove();
 }
 
