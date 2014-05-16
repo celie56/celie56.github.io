@@ -60,15 +60,24 @@ var addGames = function addGamesF(){
 }
 
 // Called immediately
-update(0);
 genButtons();
 $('#0').addClass('active');
 
-//$(document).ready(function(){
-    var path = window.location.pathname.toLowerCase();
-    if(path == '/nopic')
-        $picture.remove();
-//});
+
+var path = window.location.pathname.toLowerCase();
+if(path == '/nopic'){
+	$picture.remove();
+	update(0);
+}
+else if(path == '/home')
+	update(0);
+else if(path == '/about')
+	update(1);
+else if(path == '/projects')
+	update(2);
+else
+	update(0);
+	
 
 // waiting
 $("li").click(function(event){
