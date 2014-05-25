@@ -47,6 +47,5 @@ update(0);
 genButtons();
 
 $("li").click(function(event){
-    console.log($(this)[0].id);
     update($(this)[0].id);
 });
