@@ -14,7 +14,7 @@
 
 #buttons {
     background-color: #00274c;
-    margin-top: .8%;
+    margin-top: 1.2%;
     /*border-bottom: dashed;
     border-width: medium;
     border-bottom-color: black;*/
@@ -30,7 +30,8 @@
 #buttons > li > a{
     background-color: #00274c;
     color: white;
-    border: solid;
+    border-left: solid;
+    border-right: solid;
     border-width: 2px;
 }
 

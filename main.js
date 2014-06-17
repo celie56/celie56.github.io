@@ -26,27 +26,34 @@ var pages =
 
 var $currentPage = $("#buttons").children().first();
 
+// Updating Content Function
 var setHeader = function setHeaderF(header) {
     $header.html(header);
 }
 var setContent = function setContentF(path) {
+    // Grab content from pages/[path] and set the main page to it
     $.get("pages/" + path, function (data) {
         $content.html(data);
     })
 }
+
+// Initial Button Generation Function
 var genButtons = function genButtonsF() {
     for (var i = 0; i < pages.length; i++) {
         $buttons.append("<li class=\"button\" id=\"" + i + "\"><a>" + pages[i].button + "</a></li>");
     }
 }
-var update = function updateF(number, page) {
+genButtons();   // Call immediately
+
+
+// Update everything function
+var update = function updateF(number) {
     setHeader(pages[number].header);
     setContent(pages[number].path);
 }
+update(0);      // Initial Update
 
-update(0);
-genButtons();
-
+// Event for when you click on a header button
 $("li").click(function (event) {
     $currentPage.children().toggleClass("active");
     $currentPage = $(this);
@@ -59,4 +66,5 @@ $(document).ready(
    function () {
        $currentPage = $("#buttons").children().first();
        $currentPage.children().toggleClass("active");
-   });
+   }
+);
