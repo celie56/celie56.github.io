@@ -1,7 +1,6 @@
-﻿$header = $("#header");
-$content = $("#content");
-$buttons = $("#buttons");
-
+﻿
+// container for pages, this list will be used to generate buttons and link
+// to documents in the pages folder
 var pages =
 [
   {
@@ -24,47 +23,78 @@ var pages =
 
 ];
 
-var $currentPage = $("#buttons").children().first();
+// header and content declarations
+$header = $("#header");
+$content = $("#content");
+var currentPage = 0;
 
 // Updating Content Function
 var setHeader = function setHeaderF(header) {
     $header.html(header);
-}
+};
 var setContent = function setContentF(path) {
     // Grab content from pages/[path] and set the main page to it
     $.get("pages/" + path, function (data) {
         $content.html(data);
-    })
-}
-
-// Initial Button Generation Function
-var genButtons = function genButtonsF() {
-    for (var i = 0; i < pages.length; i++) {
-        $buttons.append("<li class=\"button\" id=\"" + i + "\"><a>" + pages[i].button + "</a></li>");
-    }
-}
-genButtons();   // Call immediately
-
+    });
+};
+// toggles whether the button is active or not
+var toggleButton = function toggleButtonF(num) {
+    $("#buttons li a:nth(" + num + ")").toggleClass("active");
+};
 
 // Update everything function
 var update = function updateF(number) {
+    toggleButton(currentPage);
+    currentPage = number;
+    toggleButton(currentPage);
+
     setHeader(pages[number].header);
     setContent(pages[number].path);
-}
+};
 update(0);      // Initial Update
 
-// Event for when you click on a header button
-$("li").click(function (event) {
-    $currentPage.children().toggleClass("active");
-    $currentPage = $(this);
-    $(this).children().toggleClass("active");
-    update($(this)[0].id);
-});
+var setDesktopView = function setDesktopViewF() {
+    $("#navigation").html("<ul id=\"buttons\" class=\"nav nav-pills navbar nav-justified navbar-fixed-top\"></ul>");
+
+    for (var i = 0; i < pages.length; i++) {
+        $("#buttons").append("<li class=\"button\" id=\"" + i + "\"><a>" + pages[i].button + "</a></li>");
+    }
+    // button click event woot woot
+    $(".button").bind("click", function (event) {
+        update($(this)[0].id);
+    });
+    toggleButton(currentPage);
+    $(window).bind("resize", function () {
+        checkWidth();
+    });
+};
+var setMobileView = function setMobileViewF() {
+    $("#navigation").html("<a id=\"simple-menu\" href=\"#sidr\">Toggle menu</a>");
+    $("#navigation").append("<div id=\"sidr\" ><ul id=\"buttons\"></ul></div>");
+    for (var i = 0; i < pages.length; i++) {
+        $("#buttons").append("<li class=\"button\" id=\"" + i + "\"><a>" + pages[i].button + "</a></li>");
+    }
+    $('#simple-menu').sidr();
+    $(window).bind("resize", function () {
+        $('#simple-menu').sidr('close');
+        checkWidth();
+    });
+};
+
+var checkWidth = function checkWidthF() {
+    var windowsize = $(window).width();
+    if (windowsize < 800) {
+        setMobileView();
+    }
+    else {
+        setDesktopView();
+    }
+};
+checkWidth();   // initial width check
+// Listener to see if the window size changes
+//$(window).resize(function () {
+//    checkWidth();
+//});
 
 
-$(document).ready(
-   function () {
-       $currentPage = $("#buttons").children().first();
-       $currentPage.children().toggleClass("active");
-   }
-);

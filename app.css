@@ -1,5 +1,6 @@
-﻿#background {
-    background-color: #E8D4A3;
+﻿
+#background {
+    background-color: #333333;
 }
 
 #center-content {
@@ -37,9 +38,9 @@
 
 /* the button representing the current page is active */
 /* Yeah, using important is bad... I need to fix that */
-#buttons > li > a.active {
-    background-color: #ffcb05;
-    color: #00274c;
+.active {
+    background-color: #ffcb05 !important;
+    color: #00274c !important;
 }
 
 /* hover over nav buttons */
