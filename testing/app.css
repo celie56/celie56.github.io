@@ -1,0 +1,35 @@
+﻿.button:hover{
+}
+
+.nav-tab > .button > a{
+    background-color: #00274c;
+}
+
+a.active {
+    background-color: #ffcb05 !important;
+}
+
+.nav-tab > .button > a:hover {
+    cursor: pointer;
+    background-color: #ffcb05;
+}
+
+@media (min-width: 768px){
+.navbar{
+        margin-bottom: auto;
+        display: table;
+        table-layout: auto;
+        float: none;
+        width: 100%;
+    }
+    .navbar>li {
+        display: table-cell;
+        float: none;
+    }
+} 
+
+.button {
+    padding-right: .6em;
+    font-size: x-large;
+}
+
