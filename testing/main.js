@@ -56,7 +56,7 @@ $("li").click(function (event) {
 
 
 $(document).ready(
-    function () {
-        $currentPage = $("#buttons").children().first();
-        $currentPage.children().toggleClass("active");
-    });
+   function () {
+       $currentPage = $("#buttons").children().first();
+       $currentPage.children().toggleClass("active");
+   });
