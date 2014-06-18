@@ -4,57 +4,61 @@
 }
 
 #center-content {
-    background-color: white;
-    border: solid;
-    border-width: thick;
-    border-color: #ffcb05;
-    margin-top: .2%;
-    padding-bottom: 2%;
+    background-color: #333333;
+    color: #ffcb05;
+    
     /*height: 99%;*/
+}
+#center-content h1 {
+    color: #50A7FF;
+}
+#content {
+    border: dashed;
+    border-width: thick;
+    border-color: #50A7FF;
+    margin: .2%;
+    padding: 2%;
+}
+#smenu {
+    cursor: pointer;
+    color: #ffcb05;
 }
 
 #buttons {
     background-color: #00274c;
-    margin-top: 1.2%;
+    
     /*border-bottom: dashed;
     border-width: medium;
     border-bottom-color: black;*/
 }
 
-#buttons > li{
-    padding: .2% 1%;
+/* Default Header button style */
+#buttons li{
     font-size: large;
     font-weight: bold;
-}
-
-/* Default Header button style */
-#buttons > li > a{
-    background-color: #00274c;
+    background-color: #50A7FF;
     color: white;
-    border-left: solid;
+    /*border-left: solid;
     border-right: solid;
-    border-width: 2px;
+    border-width: 2px;*/
 }
 
 /* the button representing the current page is active */
 /* Yeah, using important is bad... I need to fix that */
 .active {
     background-color: #ffcb05 !important;
-    color: #00274c !important;
+    color: #50A7FF !important;
 }
 
-/* hover over nav buttons */
-#buttons > li > a:hover {
+.button{
     cursor: pointer;
-    color: #00274c;
+    text-align: center;
+}
+
+.button:hover{
     background-color: #ffcb05 !important;
 }
 
-.navbar{
-    display: table;
-    table-layout: auto;
+a {
+    color: #50A7FF;
 }
-
-
-
-

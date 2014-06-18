@@ -38,9 +38,18 @@ var setContent = function setContentF(path) {
         $content.html(data);
     });
 };
+var GenButtons = function GenButtonsF() {
+    for (var i = 0; i < pages.length; i++) {
+        $("#buttons").append("<li class=\"button\" id=\"" + i + "\">" + pages[i].button + "</li>");
+    }
+    $(".button").bind("click", function (event) {
+        update($(this)[0].id);
+    });
+}
+GenButtons();
 // toggles whether the button is active or not
 var toggleButton = function toggleButtonF(num) {
-    $("#buttons li a:nth(" + num + ")").toggleClass("active");
+    $("#buttons li:nth(" + num + ")").toggleClass("active");
 };
 
 // Update everything function
@@ -52,49 +61,15 @@ var update = function updateF(number) {
     setHeader(pages[number].header);
     setContent(pages[number].path);
 };
+toggleButton(0);
 update(0);      // Initial Update
 
-var setDesktopView = function setDesktopViewF() {
-    $("#navigation").html("<ul id=\"buttons\" class=\"nav nav-pills navbar nav-justified navbar-fixed-top\"></ul>");
-
-    for (var i = 0; i < pages.length; i++) {
-        $("#buttons").append("<li class=\"button\" id=\"" + i + "\"><a>" + pages[i].button + "</a></li>");
-    }
-    // button click event woot woot
-    $(".button").bind("click", function (event) {
-        update($(this)[0].id);
-    });
-    toggleButton(currentPage);
-    $(window).bind("resize", function () {
-        checkWidth();
-    });
-};
-var setMobileView = function setMobileViewF() {
-    $("#navigation").html("<a id=\"simple-menu\" href=\"#sidr\">Toggle menu</a>");
-    $("#navigation").append("<div id=\"sidr\" ><ul id=\"buttons\"></ul></div>");
-    for (var i = 0; i < pages.length; i++) {
-        $("#buttons").append("<li class=\"button\" id=\"" + i + "\"><a>" + pages[i].button + "</a></li>");
-    }
-    $('#simple-menu').sidr();
-    $(window).bind("resize", function () {
-        $('#simple-menu').sidr('close');
-        checkWidth();
-    });
-};
-
-var checkWidth = function checkWidthF() {
-    var windowsize = $(window).width();
-    if (windowsize < 800) {
-        setMobileView();
-    }
-    else {
-        setDesktopView();
-    }
-};
-checkWidth();   // initial width check
-// Listener to see if the window size changes
-//$(window).resize(function () {
-//    checkWidth();
-//});
 
 
+// Menu stuff
+$('#smenu').sidr();     // initialize menu
+// clicking anywhere will close the menu
+$('div').bind('click', function (e) {
+    if (!$(e.target).hasClass('button'))
+        $.sidr('close');
+})
