@@ -1,0 +1,42 @@
+
+<div style="text-align: center">
+	<div>
+		<h1 id="time"></h1>
+		<h1 id="working"></h1>
+  	</div>
+</div>
+<script>
+	function AmIWorking(){
+		var currentDate = new Date();
+		var day = currentDate.getDay();
+		var hour = currentDate.getHours();
+		var working = document.getElementById("working");
+		var prefix = "I am ";
+		var output = "";
+		if (day > 0 && day < 5){
+			if (hour > 8 && hour < 16) output = "working";
+			else if (hour == 8 || hour == 16) output = "probably working";
+			else if (hour == 7 || hour == 17) output = "probably not working";
+			else output = "not working";
+		}
+		else if (day == 5)
+			if (hour > 8 && hour < 15)
+				output = "possibly working because it's Friday";
+			else
+				output = "Fridaying";
+		else
+			output = "not working because it's the weekend...";
+		working.innerHTML = prefix + output;
+	}
+	AmIWorking();
+	intervals.push(setInterval(function(){AmIWorking()}, 60000));
+
+	function theTime(){
+		var time = document.getElementById("time");
+		var d = new Date();
+		var t = d.toLocaleTimeString();
+		time.innerHTML = t;
+	}
+	theTime();
+	intervals.push(setInterval(function(){theTime()}, 1000));
+</script>

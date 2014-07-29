@@ -1,16 +1,20 @@
 <p>
     Welcome,
-    I am a Junior at the University of Michigan Ross School of Business. 
-    I am majoring in Business Administration with a minor in Computer Science.
-    I can hold a conversation in Spanish as well as I can hold water in my hands.
-    I am interested in improving the world one day at a time.
+	I am a Junior at the <a href="www.umich.edu">University of Michigan's</a> <a href="www.bus.umich.edu">Ross School of Business.</a> 
+	Having grown up in a family owned accounting office, I have a natural interest in business and a developed passion for technology.
+	Considering both, I am majoring in Business Administration with a minor in Computer Science.
+	Another passion is traveling the world, with the most recent expedition being a study abroad in 
+	<a href="https://www.bus.umich.edu/GlobalInitiatives/GoGlobal/undergraduate/May-Study-Abroad.htm">Costa Rica</a>.
+    Speaking of which, I can hold a conversation in Spanish a bit better than I can hold water in my hands, but am frequent to try.
+    Lastly, I am interested in improving the world one day at a time especially with the club 
+	<a href="www.dorak.weebly.com">Do Random Acts of Kindness</a> of which I am the Director.
 </p>
 <p>
-    Some things that I am currently in to include:
+    Some other things that I am currently in to include:
     <ul>
-        <li>Uses of SSH</li>
-        <li>Node JS</li>
-        <li>Hot Chocolate and Coffee</li>
+        <li id="BusinessInterest"></li>
+        <li id="TechInterest"></li>
+        <li id="FunInterest"></li>
     </ul>
 </p>
 <p>
@@ -19,3 +23,29 @@
 <p>
     If you're into resumes there is a very nice one <a href="resume.pdf">here</a>
 </p>
+<script>
+	// oh my, you've found my interests :D
+	var BusinessInterests = ["Startup Sustainability",
+		"Effective Engineering Management",
+		"Ideal Internet Advertisement",
+		"Software Traffic Trends"];
+	var TechInterests = ["Node JS",
+		"AngularJS",
+		"TypeScript",
+		"SSH",
+		"Azure",
+		"Vim"];
+	var FunInterests = ["Taking a turtle for walks",
+		"Spreading kindness",
+		"Caramel Pecan Ice Cream",
+		"Long bike rides",
+		"Long walks on the beach"];
+	document.getElementById("BusinessInterest").innerHTML =
+		BusinessInterests[Math.floor(Math.random() * BusinessInterests.length)];
+	document.getElementById("TechInterest").innerHTML =
+		TechInterests[Math.floor(Math.random() * TechInterests.length)];
+	document.getElementById("FunInterest").innerHTML =
+		FunInterests[Math.floor(Math.random() * FunInterests.length)];
+
+	
+</script>
