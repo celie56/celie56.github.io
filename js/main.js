@@ -27,11 +27,11 @@ var pages =
 	  "path": "working.html"
   },
 
-  {
-	  "header": "Let's play a game",
-	  "button": "Blackjack?",
-	  "path": "blackjack.html"
-  }
+  //{
+  //    "header": "Let's play a game",
+  //    "button": "Blackjack?",
+  //    "path": "blackjack.html"
+  //}
 
 ];
 
