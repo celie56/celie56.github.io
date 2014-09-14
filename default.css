@@ -1,0 +1,75 @@
+﻿
+#background {
+    background-color: #333333;
+}
+
+#center-content {
+	margin-top: 60px;
+    background-color: #333333;
+    color: #ffcb05;
+    
+    /*height: 99%;*/
+}
+#center-content h1 {
+    color: #50A7FF;
+}
+#content {
+    border: dashed;
+    border-width: thick;
+    border-color: #50A7FF;
+    margin: .2%;
+    padding: 2%;
+}
+
+#header-links {
+    background-color: #333333;
+}
+
+#smenu {
+    cursor: pointer;
+    color: #ffcb05;
+}
+
+#buttons {
+	margin-top: .5%;
+    /*background-color: #00274c;
+    
+    /*border-bottom: dashed;
+    border-width: medium;
+    border-bottom-color: black;*/
+}
+
+/* Default Header button style */
+#buttons li{
+    font-size: large;
+    font-weight: bold;
+    background-color: #50A7FF;
+    color: white;
+    /*border-left: solid;
+    border-right: solid;
+    border-width: 2px;*/
+}
+
+/* the button representing the current page is active */
+/* Yeah, using important is bad... I need to fix that */
+.active {
+    background-color: #ffcb05 !important;
+    color: #50A7FF !important;
+}
+.disabled {
+    background-color: #ffcb05 !important;
+    color: #50A7FF !important;
+}
+
+.button{
+    cursor: pointer;
+    text-align: center;
+}
+
+.button:hover{
+    background-color: #ffcb05 !important;
+}
+
+a {
+    color: #50A7FF;
+}
