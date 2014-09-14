@@ -25,6 +25,12 @@ var pages =
 	  "header": "Is Chris Working?",
 	  "button": "Working?",
 	  "path": "working.html"
+  },
+
+  {
+	  "header": "Let's play a game",
+	  "button": "Blackjack?",
+	  "path": "blackjack.html"
   }
 
 ];
@@ -47,7 +53,7 @@ var setContent = function setContentF(path) {
 };
 var GenButtons = function GenButtonsF() {
 	for (var i = 0; i < pages.length; i++) {
-		$("#buttons").append("<li class=\"button\" id=\"" + i + "\">" + pages[i].button + "</li>");
+		$("#buttons").append("<li class=\"button btn\" id=\"" + i + "\">" + pages[i].button + "</li>");
 	}
 	$(".button").bind("click", function (event) {
 		update($(this)[0].id);

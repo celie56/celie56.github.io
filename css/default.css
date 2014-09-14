@@ -4,6 +4,7 @@
 }
 
 #center-content {
+	margin-top: 60px;
     background-color: #333333;
     color: #ffcb05;
     
@@ -19,13 +20,19 @@
     margin: .2%;
     padding: 2%;
 }
+
+#header-links {
+    background-color: #333333;
+}
+
 #smenu {
     cursor: pointer;
     color: #ffcb05;
 }
 
 #buttons {
-    background-color: #00274c;
+	margin-top: .5%;
+    /*background-color: #00274c;
     
     /*border-bottom: dashed;
     border-width: medium;
@@ -46,6 +53,10 @@
 /* the button representing the current page is active */
 /* Yeah, using important is bad... I need to fix that */
 .active {
+    background-color: #ffcb05 !important;
+    color: #50A7FF !important;
+}
+.disabled {
     background-color: #ffcb05 !important;
     color: #50A7FF !important;
 }

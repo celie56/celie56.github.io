@@ -1,42 +1,48 @@
 
-<div style="text-align: center">
-	<div>
-		<h1 id="time"></h1>
-		<h1 id="working"></h1>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+<div ng-app="" style="text-align: center">
+	<div ng-controller="main">
+		<h1>{{time}}</h1>
+		<h1>{{message}}</h1>
   	</div>
 </div>
 <script>
-	function AmIWorking(){
-		var currentDate = new Date();
-		var day = currentDate.getDay();
-		var hour = currentDate.getHours();
-		var working = document.getElementById("working");
-		var prefix = "I am ";
-		var output = "";
-		if (day > 0 && day < 5){
-			if (hour > 8 && hour < 16) output = "working";
-			else if (hour == 8 || hour == 16) output = "probably working";
-			else if (hour == 7 || hour == 17) output = "probably not working";
-			else output = "not working";
-		}
-		else if (day == 5)
-			if (hour > 8 && hour < 15)
-				output = "possibly working because it's Friday";
-			else
-				output = "Fridaying";
-		else
-			output = "not working because it's the weekend...";
-		working.innerHTML = prefix + output;
-	}
-	AmIWorking();
-	intervals.push(setInterval(function(){AmIWorking()}, 60000));
+function main($scope, $timeout){
 
-	function theTime(){
-		var time = document.getElementById("time");
-		var d = new Date();
-		var t = d.toLocaleTimeString();
-		time.innerHTML = t;
+	var timer = function(){
+		$scope.time = (new Date()).toLocaleTimeString();
+		$timeout(timer, 1000);
 	}
-	theTime();
-	intervals.push(setInterval(function(){theTime()}, 1000));
+	timer();
+
+	var msg = [
+		"I am working",
+		"I am not working",
+		"I am probably working",
+		"I am probably not working",
+		"It's Friday!",
+		"It's the weekend!"
+	];
+
+	var working = function(){
+		var d = new Date();
+		if (d.getDay() > 0 && // Monday through Thursday
+			d.getDay() < 5)
+			if (d.getHours() > 8 || d.getHours() < 16) // 9-4
+				$scope.message = msg[0];
+			else if (d.getHours() < 7 || d.getHours() > 17)
+				$scope.message = msg[1];
+			else if (d.getHours() == 8 || d.getHours() == 16)
+				$scope.message = msg[2];
+			else
+				$scope.message = MSG[3];
+		else if (d.getDay() == 5)
+			$scope.message = msg[4];
+		else
+			$scope.message = msg[5];
+		$timeout(working, 60000);
+	}
+	working();
+
+}
 </script>
