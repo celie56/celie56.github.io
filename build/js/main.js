@@ -21,4 +21,6 @@ $(function(){
     $('.content').click(function(){
         $('#menu').slicknav('close');
     })
+
+	$('.yoxview').yoxview();
 });

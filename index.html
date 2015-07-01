@@ -4,18 +4,20 @@
 		<title>Elie Home</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
-
 		<link rel="shortcut icon" href="pics/Elie.ico">
 
+        <!-- Reset CSS -->
 		<link rel="stylesheet" href="css/normalize.css">
+        <!-- My CSS -->
 		<link href="css/style.css" type="text/css" rel="stylesheet">
         <!-- List.js -->
-        <script src='http://listjs.com/no-cdn/list.js'></script>
+        <script src='js/list.min.js'></script>
         <!-- JQuery -->
-        <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+        <script src="js/jquery.js"></script>
         <!-- Slick Nav  -->
-        <link rel="stylesheet" href="css/slicknav.css" />
         <script src="js/jquery.slicknav.min.js"></script>
+        <!-- Yoxview -->
+        <script type="text/javascript" src="yoxview/yoxview-init.js"></script>
 	</head>
 	<body>
 		<header id='header'>
@@ -37,6 +39,7 @@
 <li><a href='#about'>about</a></li>
 <li><a href='#experience'>experience</a></li>
 <li><a href='#courses'>courses</a></li>
+<li><a href='#photos'>photos</a></li>
 </ul></nav><div id='content'>
 <div class='outer'><div class='content' id='about'>
 <h2>About</h2>
@@ -376,6 +379,16 @@
 	var courses = new List('courses', options);
 	courses.sort('order', {order: 'asc'});
 </script>
+</div></div>
+<div class='outer'><div class='content' id='photos'>
+<h2>Photos</h2>
+<div class="yoxview">
+    <a href="pics/chris.jpg"><img src="pics/chris_thumb.jpg" alt="Chelsey and I" title="Chelsey and I" /></a>
+    <a href="pics/chris2.jpg"><img src="pics/chris2_thumb.jpg" alt="Bighouse" title="Bighouse MHacks" /></a>
+    <a href="pics/chris3.jpg"><img src="pics/chris3_thumb.jpg" alt="Professional" title="Professional" /></a>
+    <a href="pics/chris4.jpg"><img src="pics/chris4_thumb.jpg" alt="La Carpio Costa Rica" title="La Carpio Costa Rica" /></a>
+    <a href="pics/Roxy.jpg"><img src="pics/Roxy_thumb.jpg" alt="My favorite turtle" title="Roxy" /></a>
+</div>
 </div></div>
 </div>
 		</div>
