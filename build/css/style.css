@@ -115,7 +115,7 @@ th:focus {
 	color: black;
 }
 
-tr td:nth-child(3){
+tr td:nth-child(4){
 	text-align: center;
 }
 
@@ -144,6 +144,9 @@ tr:nth-child(even){
 	background: #28a8e0 none repeat scroll 0% 0%;
 	color: white;
 	font-size: medium;
+}
+.none{
+	display: none;
 }
 
 
