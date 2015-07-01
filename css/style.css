@@ -149,6 +149,9 @@ tr:nth-child(even){
 	display: none;
 }
 
+.yoxview a{
+	width: 48%;
+}
 
 
 
