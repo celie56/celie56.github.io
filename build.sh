@@ -5,6 +5,17 @@
 # ./o <courses.txt >../pages/04courses.html
 # cd ..
 
+echo "starting build :)"
+echo "Ready.				RRRAAAAWWWRRR"
+echo "Set.  				RRRAAAAWWWRRR"
+echo "Go.   				RRRAAAAWWWRRR"
+
+echo " "
+echo "------------------------------------"
+echo "Files completed"
+echo " "
+
+# Actual Stuff
 rm *.html
 
 for file in pages/*.html; do
@@ -14,7 +25,7 @@ for file in pages/*.html; do
 		continue
 	fi
 	name="$(basename $file | cut -c 3-)"
-	echo "$name done"
+	echo "$name"
 	echo "<li><a href='#${name%%.*}'>${name%%.*}</a></li>" >> link.html
 	echo "<div class='outer'><div class='content' id='${name%%.*}'>" >> content.html
 	cat < "$file" >> "content.html"
