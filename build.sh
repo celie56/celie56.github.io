@@ -1,3 +1,8 @@
+# Notes on building
+# Windows - requires cygwin installed and cygwin/bin in PATH
+
+
+
 # Not currently necessary as courses is all set
 # rm $(find ./pages/ -name "*courses*")
 # cd coursework
@@ -42,4 +47,3 @@ cat < base/footer.html >> index.html
 
 rm link.html
 rm content.html
-
