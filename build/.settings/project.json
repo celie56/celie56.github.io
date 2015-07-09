@@ -1,5 +1,0 @@
-{
-	"commands": {
-		"make": "sh build.sh"
-	}
-}
