@@ -46,6 +46,7 @@ nav{
 	position: fixed;
 	padding: 5px;
 	background-color: rgba(152, 156, 151, .3);
+    left: 60px;
 }
 
 header{
@@ -78,7 +79,7 @@ h1{
 .tag{
 	border: 1px solid black;
 	display: inline;
-	border-radius: 6px;
+	border-radius: 2px;
 	padding: 2px;
 	text-decoration: none;
 	background: #28a8e0 none repeat scroll 0% 0%;
