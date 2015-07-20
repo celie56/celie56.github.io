@@ -1,4 +1,4 @@
-# Notes on building
+# building notes
 # Windows - requires cygwin installed and cygwin/bin in PATH
 
 
