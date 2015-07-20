@@ -5,7 +5,7 @@
 
 $( ".search" ).keyup(function() {
 	if ($('.list').is(':empty')){
-		$('.postmessage').html("If there is something more specific that you are looking for please email me at <a href='mailto:celie56@gmail.com?subject=webfeedback'>celie56@gmail.com</a>");
+		$('.postmessage').html("If there is something more specific that you are looking for please email me at <a href='mailto:celie@umich.edu?subject=webfeedback'>celie@umich.edu</a>");
 	}
 	else{
 		$('.postmessage').html('');
