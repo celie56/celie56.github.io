@@ -1,7 +1,7 @@
 # building notes
 # Windows - requires cygwin installed and cygwin/bin in PATH
-
-
+#			or you can install github for windows and use the
+#			included shell
 
 # Not currently necessary as courses is all set
 # rm $(find ./pages/ -name "*courses*")
