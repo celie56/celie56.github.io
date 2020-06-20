@@ -1,6 +1,0 @@
-// Task runner for VS Code
-{
-    "version": "0.1.0",
-    "command": "sh",
-    "args": ["build.sh"]
-}
